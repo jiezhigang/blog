@@ -19,16 +19,25 @@ module.exports = {
             
             //格式二：添加下拉菜单，link指向的文件路径
             {
-                text: '分类',  //默认显示        
-                ariaLabel: '分类',   //用于识别的label
+                text: '亭',  //默认显示        
+                ariaLabel: '亭',   //用于识别的label
                 items: [
-                    { text: '文章', link: '/pages/folder_index/index.md' },  
+                    { text: 'java', link: '/pages/folder1/java.md' },  
                     //点击标签会跳转至link的markdown文件生成的页面
-                    { text: '琐碎', link: '/pages/folder2/test4.md' },
+                    { text: 'python', link: '/pages/folder1/python.md' },
+                    { text: 'go', link: '/pages/folder1/go.md' },
                 ]
             },
-            { text: '功能演示', link: '/pages/folder1/test3.md' },
-            
+            // { text: '功能演示', link: '/pages/folder1/test3.md' },
+            {
+                text: '阁',  //默认显示        
+                ariaLabel: '阁',   //用于识别的label
+                items: [
+                    { text: 'k8s', link: '/pages/folder2/k8s.md' },
+                    { text: 'linkerd2', link: '/pages/folder2/linkerd2.md' },
+                ]
+            },
+
             //格式三：跳转至外部网页，需http/https前缀
             { text: 'Github', link: 'https://github.com/jiezhigang' },
         ],
@@ -37,19 +46,20 @@ module.exports = {
         sidebar: {
             '/pages/folder1/':[         
                 {
-                    title: '测试菜单1',   // 一级菜单名称
+                    title: 'java',   // 一级菜单名称
                     collapsable: false, // false为默认展开菜单, 默认值true是折叠,
                     sidebarDepth: 1,    //  设置侧边导航自动提取markdown文件标题的层级，默认1为h2层级
                     children: [
-                        ['test1.md', '子菜单1'],  //菜单名称为'子菜单1'，跳转至/pages/folder1/test1.md
-                        ['test3.md', '子菜单2']
+                        ['java.md', 'java'],  //菜单名称为'子菜单1'，跳转至/pages/folder1/test1.md
+                        ['python.md', 'python'],
+                        ['go.md', 'go']
                     ]
                 },
                 {
-                    title: '测试菜单2',
+                    title: 'python',
                     collapsable: false, 
                     children: [
-                        ['test2.md', '子菜单1']
+                        ['python_convert_chinese.md', 'python 汉字编码转换']
                     ]
                 }
             ],
