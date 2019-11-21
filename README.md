@@ -12,3 +12,5 @@
 ├── deploy.sh     //之后用于编写上传、发布脚本的文件
 └── package.json  //之前创建的Node.js项目描述文件
 ```
+
+![参考资料](https://juejin.im/post/5dce1e0e5188254eda3936c5)
